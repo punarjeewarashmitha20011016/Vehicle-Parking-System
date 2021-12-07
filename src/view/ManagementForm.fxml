@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="460.0" prefWidth="625.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ManagementFormController">
+   <center>
+      <AnchorPane fx:id="managementFormView" prefHeight="427.0" prefWidth="625.0" style="-fx-background-color: #ffffff;" BorderPane.alignment="CENTER">
+         <children>
+            <JFXButton layoutX="236.0" layoutY="60.0" onAction="#btnAddVehicle" prefHeight="25.0" prefWidth="100.0" style="-fx-background-color: green;" text="Add Vehicle" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton layoutX="358.0" layoutY="60.0" onAction="#btnAddDriver" prefHeight="25.0" prefWidth="101.0" style="-fx-background-color: green;" text="Add Driver" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton layoutX="481.0" layoutY="60.0" onAction="#btnManagementLogout" prefHeight="25.0" prefWidth="82.0" style="-fx-background-color: grey;" text="Logout" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXComboBox fx:id="cmbSelectOption" labelFloat="true" layoutX="62.0" layoutY="60.0" onAction="#cmbSelectOptionOnAction" prefHeight="25.0" prefWidth="152.0" promptText="Select Option" />
+            <AnchorPane fx:id="parkingOrDeliveringView" layoutX="23.0" layoutY="125.0" prefHeight="318.0" prefWidth="560.0" />
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

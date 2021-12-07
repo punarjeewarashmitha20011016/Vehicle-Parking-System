@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="257.0" prefWidth="490.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AddVehicleFormController">
+   <children>
+      <Label layoutX="29.0" layoutY="39.0" text="Vehicle Number" />
+      <JFXTextField fx:id="txtAddVehicleNumber" layoutX="138.0" layoutY="27.0" />
+      <Label layoutX="29.0" layoutY="75.0" text="Maximum Weight" />
+      <JFXTextField fx:id="txtAddVehicleWeight" layoutX="138.0" layoutY="63.0" />
+      <Label layoutX="29.0" layoutY="112.0" text="No of Passengers" />
+      <JFXTextField fx:id="txtAddNoOfPassengers" layoutX="138.0" layoutY="100.0" />
+      <Label layoutX="29.0" layoutY="151.0" text="Vehicle Type" />
+      <JFXComboBox fx:id="cmbSelectVehicleType" layoutX="138.0" layoutY="139.0" onAction="#cmbVehicleTypeOnAction" prefHeight="25.0" prefWidth="135.0" />
+      <JFXButton buttonType="RAISED" layoutX="319.0" layoutY="186.0" onAction="#btnAddVehicle" prefHeight="34.0" prefWidth="112.0" style="-fx-background-color: green;" text="Add Vehicle" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+   </children>
+</AnchorPane>

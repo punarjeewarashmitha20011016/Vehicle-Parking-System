@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="257.0" prefWidth="490.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AddDriverFormController">
+   <children>
+      <Label layoutX="28.0" layoutY="27.0" text="Driver Name " />
+      <JFXTextField fx:id="txtAddDriverName" layoutX="144.0" layoutY="15.0" prefHeight="25.0" prefWidth="297.0" />
+      <Label layoutX="28.0" layoutY="56.0" text="NIC" />
+      <JFXTextField fx:id="txtAddDriverNic" layoutX="144.0" layoutY="44.0" prefHeight="25.0" prefWidth="297.0" />
+      <Label layoutX="28.0" layoutY="85.0" text="Driving Licence No" />
+      <JFXTextField fx:id="txtAddDriverLicenceNo" layoutX="144.0" layoutY="73.0" prefHeight="25.0" prefWidth="297.0" />
+      <Label layoutX="28.0" layoutY="114.0" text="Address" />
+      <JFXTextField fx:id="txtAddDriverAddress" layoutX="144.0" layoutY="102.0" prefHeight="25.0" prefWidth="297.0" />
+      <Label layoutX="28.0" layoutY="143.0" text="Contact No" />
+      <JFXTextField fx:id="txtAddDriverContactNo" layoutX="144.0" layoutY="131.0" prefHeight="25.0" prefWidth="297.0" />
+      <JFXButton buttonType="RAISED" layoutX="357.0" layoutY="194.0" onAction="#btnAddDriver" prefHeight="25.0" prefWidth="100.0" style="-fx-background-color: green;" text="Add Driver" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+   </children>
+</AnchorPane>

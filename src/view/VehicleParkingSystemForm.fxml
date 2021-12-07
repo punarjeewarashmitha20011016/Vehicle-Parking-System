@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="464.0" prefWidth="704.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.VehicleParkingSystemFormController">
+    <top>
+        <AnchorPane prefHeight="58.0" prefWidth="704.0" style="-fx-background-color: #6600cc;" BorderPane.alignment="CENTER">
+            <children>
+                <Label alignment="CENTER" contentDisplay="CENTER" layoutX="217.0" layoutY="17.0" text="Vehicle Parking Managemenet System" textFill="WHITE">
+                    <font>
+                        <Font size="16.0" />
+                    </font>
+                </Label>
+            </children>
+        </AnchorPane>
+    </top>
+   <right>
+        <AnchorPane fx:id="mainForm" prefHeight="406.0" prefWidth="707.0" style="-fx-background-color: #ffffff;" BorderPane.alignment="CENTER">
+            <children>
+                <Label layoutX="30.0" layoutY="52.0" text="Select Vehicle" />
+                <JFXComboBox fx:id="cmbVehicleDetails" layoutX="131.0" layoutY="48.0" onAction="#cmbVehicleDetails" prefHeight="25.0" prefWidth="175.0" />
+                <Label layoutX="30.0" layoutY="94.0" text="Vehicle Type" />
+                <Label layoutX="30.0" layoutY="134.0" text="Driver" />
+                <JFXComboBox fx:id="cmbDriverDetails" layoutX="131.0" layoutY="122.0" onAction="#cmbDriverDetailsOnAction" prefHeight="25.0" prefWidth="175.0" />
+                <Label alignment="TOP_CENTER" layoutX="30.0" layoutY="215.0" prefHeight="128.0" prefWidth="280.0" style="-fx-background-color: #ffffff; -fx-border-color: black;" text="Your Parking Slot Number">
+                    <font>
+                        <Font size="17.0" />
+                    </font>
+                </Label>
+                <Label fx:id="txtParkingSlotNumber" alignment="CENTER" contentDisplay="CENTER" layoutX="102.0" layoutY="257.0" prefHeight="52.0" prefWidth="140.0">
+                    <font>
+                        <Font name="System Bold" size="50.0" />
+                    </font>
+                </Label>
+                <JFXButton buttonType="RAISED" layoutX="450.0" layoutY="171.0" onAction="#btnParkVehicle" prefHeight="25.0" prefWidth="198.0" style="-fx-background-color: green; -fx-background-radius: 10px;" text="Park Vehicle" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></JFXButton>
+                <JFXButton buttonType="RAISED" layoutX="450.0" layoutY="215.0" onAction="#btnOnDeliveryShift" prefHeight="25.0" prefWidth="198.0" style="-fx-background-color: green; -fx-background-radius: 10px;" text="On Delivery Shift" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></JFXButton>
+                <Label fx:id="timeDateClock" layoutX="448.0" layoutY="56.0" prefHeight="81.0" prefWidth="200.0" style="-fx-border-color: black;">
+                    <font>
+                        <Font size="21.0" />
+                    </font>
+                </Label>
+                <Label fx:id="dateId" layoutX="457.0" layoutY="63.0" prefHeight="17.0" prefWidth="73.0" />
+                <Label fx:id="timeId" alignment="CENTER" contentDisplay="CENTER" layoutX="493.0" layoutY="85.0" prefHeight="34.0" prefWidth="117.0">
+                    <font>
+                        <Font size="24.0" />
+                    </font>
+                </Label>
+                <JFXButton buttonType="RAISED" layoutX="450.0" layoutY="259.0" onAction="#btnManagementLogin" prefHeight="25.0" prefWidth="198.0" style="-fx-background-color: green; -fx-background-radius: 10px;" text="Management Login" textFill="WHITE">
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                </JFXButton>
+                <JFXTextField fx:id="txtSetVehicleType" layoutX="131.0" layoutY="84.0" prefHeight="25.0" prefWidth="175.0" />
+            <Separator layoutX="330.0" layoutY="20.0" orientation="VERTICAL" prefHeight="366.0" prefWidth="45.0" />
+            </children>
+        </AnchorPane>
+   </right>
+</BorderPane>

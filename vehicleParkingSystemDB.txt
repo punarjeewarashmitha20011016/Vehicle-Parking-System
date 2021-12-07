@@ -1,0 +1,56 @@
+drop database if exists VehicleParkingSystem;
+create database if not exists VehicleParkingSystem;
+use VehicleParkingSystem;
+
+drop table if exists Vehicle;
+create table if not exists Vehicle(
+	vechicleNo VARCHAR(20),
+	vehicleWeight Double,
+	passengersOfVehicle INT,
+	vehicleType VARCHAR(20),
+	CONSTRAINT PRIMARY KEY(vehicleNo)
+);
+show tables;
+desc Vehicle;
+
+drop table if exists Drivers;
+create table if not exists Drivers(
+	driverName VARCHAR(20),
+	driverNic VARCHAR(30),
+	driverLicenseNo VARCHAR(30),
+	driverAddress TEXT,
+	driverContactNo INT,
+	
+);
+show tables;
+desc Drivers;
+
+drop table if exists ParkedVehicles;
+create table if not exists ParkedVehicles(
+	parkingSlotNo INT,
+	vehicleNo VARCHAR(20),
+	vehicleType VARCHAR(20),
+	driverName VARCHAR(20),
+	parkedTime VARCHAR(20),
+	leftTime VARCHAR(20),
+	CONSTRAINT PRIMARY KEY(parkingSlotNo),
+	CONSTRAINT FOREIGN KEY(driverName) REFERENCES Driver(driverName),
+	CONSTRAINT FOREIGN KEY(vehicleNo,vehicleType) REFERENCES Vehicle(vehicleNo,vehicleType),
+);
+show tables;
+desc ParkedVehicles;
+
+drop table if exists OnDelivery;
+create table if not exists OnDelivery(
+	parkingSlotNo INT,
+	vehicleNo VARCHAR(20),
+	vehicleType VARCHAR(20),
+	driverName VARCHAR(20),
+	parkedTime VARCHAR(20),
+	leftTime VARCHAR(20),
+	CONSTRAINT PRIMARY KEY(parkingSlotNo),
+	CONSTRAINT FOREIGN KEY(driverName) REFERENCES Driver(driverName),
+	CONSTRAINT FOREIGN KEY(vehicleNo,vehicleType) REFERENCES Vehicle(vehicleNo,vehicleType),
+);
+show tables;
+desc ParkedVehicles;
